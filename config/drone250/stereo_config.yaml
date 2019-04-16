@@ -2,16 +2,16 @@
 
 #common parameters
 #support: 1 imu 1 cam; 1 imu 2 cam: 2 cam; 
-imu: 0         
+imu: 0
 num_of_cam: 2  
 
 imu_topic: "/imu0"
-image0_topic: "/mv_25001511/image_raw"
-image1_topic: "/mv_25000049/image_raw"
+image0_topic: "/stereo/left/image_raw"
+image1_topic: "/stereo/right/image_raw"
 output_path: "/home/lch/output/"
 
-cam0_calib: "left.yaml"
-cam1_calib: "right.yaml"
+cam0_calib: "left_drone250.yaml"
+cam1_calib: "right_drone250.yaml"
 image_width: 752
 image_height: 480
    

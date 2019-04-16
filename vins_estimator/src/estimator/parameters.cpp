@@ -81,6 +81,8 @@ void readParameters(std::string config_file)
 
     fsSettings["image0_topic"] >> IMAGE0_TOPIC;
     fsSettings["image1_topic"] >> IMAGE1_TOPIC;
+    std::cout<<"image0_topic"<<IMAGE0_TOPIC<<std::endl;
+    std::cout<<"image1_topic"<<IMAGE1_TOPIC<<std::endl;
     MAX_CNT = fsSettings["max_cnt"];
     MIN_DIST = fsSettings["min_dist"];
     F_THRESHOLD = fsSettings["F_threshold"];

@@ -57,7 +57,8 @@ void Estimator::inputImage(double t, const cv::Mat &_img, const cv::Mat &_img1)
     else
         featureFrame = featureTracker.trackImage(t, _img, _img1);
     //printf("featureTracker time: %f\n", featureTrackerTime.toc());
-    
+
+
     if(MULTIPLE_THREAD)  
     {     
         if(inputImageCnt % 2 == 0)
