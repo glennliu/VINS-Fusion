@@ -19,15 +19,14 @@ image_height: 480
 # Extrinsic parameter between IMU and Camera.
 estimate_extrinsic: 1   # 0  Have an accurate extrinsic parameters. We will trust the following imu^R_cam, imu^T_cam, don't change it.
                         # 1  Have an initial guess about extrinsic parameters. We will optimize around your initial guess.
-
 body_T_cam0: !!opencv-matrix
    rows: 4
    cols: 4
    dt: d
-   data: [ 5.1681538219678913e-03, 3.4854583101029402e-03, 9.9998057069447177e-01, 1.0434364279956994e-01,
-             -9.9959236413613106e-01, 2.8096596711795541e-02, 5.0682160525435394e-03, 4.5461435353326279e-02,
-                -2.8078385758676216e-02, -9.9959913607084694e-01, 3.6292450459740611e-03, -2.1598380491973344e-02,
-                 0., 0., 0., 1.]
+   data: [  1.1620426473859746e-02, -2.9025708459931021e-03, 9.9992826781277144e-01, 6.1316649378505013e-02,
+           -9.9978903872449032e-01, 1.6903807409272220e-02, 1.1667876474741157e-02, 3.7838120720735245e-02,
+           -1.6936461700284511e-02, -9.9985290737065635e-01, -2.7055290648174690e-03, -2.7334161624839107e-02,
+            0., 0., 0., 1.]
 
 #body_T_cam0: !!opencv-matrix
 #   rows: 4
@@ -43,7 +42,7 @@ body_T_cam0: !!opencv-matrix
 multiple_thread: 1
 
 #feature traker paprameters
-max_cnt: 150            # max feature number in feature tracking
+max_cnt: 100            # max feature number in feature tracking
 min_dist: 30            # min distance between two features 
 freq: 10                # frequence (Hz) of publish tracking result. At least 10Hz for good estimation. If set 0, the frequence will be same as raw image 
 F_threshold: 1.0        # ransac threshold (pixel)
