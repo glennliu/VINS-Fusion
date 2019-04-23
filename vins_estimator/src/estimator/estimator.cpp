@@ -169,17 +169,13 @@ void Estimator::inputImage(double t, const cv::Mat &_img, const cv::Mat &_img1)
         featureFrame = featureTracker.trackImage(t, _img, _img1);
     //printf("featureTracker time: %f\n", featureTrackerTime.toc());
 
-<<<<<<< HEAD
-
-=======
     if (SHOW_TRACK)
     {
         cv::Mat imgTrack = featureTracker.getTrackImage();
         pubTrackImage(imgTrack, t);
     }
     
->>>>>>> upstream/master
-    if(MULTIPLE_THREAD)  
+    if(MULTIPLE_THREAD)
     {     
         if(inputImageCnt % 2 == 0)
         {
