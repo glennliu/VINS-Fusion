@@ -257,6 +257,7 @@ bool Estimator::getIMUInterval(double t0, double t1, vector<pair<double, Eigen::
 
 bool Estimator::IMUAvailable(double t)
 {
+	printf("imu t:%f \n",t);
     if(!accBuf.empty() && t <= accBuf.back().first)
         return true;
     else
@@ -276,8 +277,8 @@ void Estimator::processMeasurements()
             curTime = feature.first + td;
             while(1)
             {
-                printf("feature:%d \n",feature.first);
-                printf("td: %d",td);
+                //printf("feature:%f \n",feature.first);
+                //printf("td: %f",td);
                 if ((!USE_IMU  || IMUAvailable(feature.first + td)))
                     break;
                 else
