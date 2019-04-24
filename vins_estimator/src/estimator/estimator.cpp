@@ -276,6 +276,8 @@ void Estimator::processMeasurements()
             curTime = feature.first + td;
             while(1)
             {
+                printf("feature:%d \n",feature.first);
+                printf("td: %d",td);
                 if ((!USE_IMU  || IMUAvailable(feature.first + td)))
                     break;
                 else
